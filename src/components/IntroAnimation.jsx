@@ -395,31 +395,31 @@ export default function IntroAnimation({ onComplete }) {
             {/* Gold glow backing */}
             <g ref={glowRef} style={{ opacity: 0 }}>
               <path filter="url(#intro-soft-glow)"
-                d="M168,80 L344,80 A88,88 0 0 1 432,168 L432,344 A88,88 0 0 1 344,432 L168,432 A88,88 0 0 1 80,344 L80,168 A88,88 0 0 1 168,80 Z"
+                d="M194,86 L318,86 A108,108 0 0 1 426,194 L426,318 A108,108 0 0 1 318,426 L194,426 A108,108 0 0 1 86,318 L86,194 A108,108 0 0 1 194,86 Z"
                 transform="rotate(45 256 256)"
-                fill="none" stroke="rgba(244,201,106,0.4)" strokeWidth="26"
+                fill="none" stroke="rgba(244,201,106,0.4)" strokeWidth="44"
                 strokeLinecap="round" strokeLinejoin="round"/>
               <path filter="url(#intro-soft-glow)"
-                d="M238,192 C238,166 146,166 146,210 C146,255 238,258 238,300 C238,342 146,342 146,320"
-                fill="none" stroke="rgba(244,201,106,0.4)" strokeWidth="30" strokeLinecap="round"/>
+                d="M236,176 C236,146 134,146 134,198 C134,248 236,250 236,300 C236,352 134,352 134,322"
+                fill="none" stroke="rgba(244,201,106,0.4)" strokeWidth="44" strokeLinecap="round"/>
               <path filter="url(#intro-soft-glow)"
-                d="M252,192 L314,334 L376,192"
-                fill="none" stroke="rgba(244,201,106,0.4)" strokeWidth="30"
+                d="M258,176 L320,336 L382,176"
+                fill="none" stroke="rgba(244,201,106,0.4)" strokeWidth="44"
                 strokeLinecap="round" strokeLinejoin="round"/>
             </g>
 
             {/* Main white strokes */}
             <path ref={diamondRef}
-              d="M168,80 L344,80 A88,88 0 0 1 432,168 L432,344 A88,88 0 0 1 344,432 L168,432 A88,88 0 0 1 80,344 L80,168 A88,88 0 0 1 168,80 Z"
+              d="M194,86 L318,86 A108,108 0 0 1 426,194 L426,318 A108,108 0 0 1 318,426 L194,426 A108,108 0 0 1 86,318 L86,194 A108,108 0 0 1 194,86 Z"
               transform="rotate(45 256 256)"
-              fill="none" stroke="#F0EBE0" strokeWidth="26"
+              fill="none" stroke="#F0EBE0" strokeWidth="44"
               strokeLinecap="round" strokeLinejoin="round"/>
             <path ref={sRef}
-              d="M238,192 C238,166 146,166 146,210 C146,255 238,258 238,300 C238,342 146,342 146,320"
-              fill="none" stroke="#F0EBE0" strokeWidth="30" strokeLinecap="round"/>
+              d="M236,176 C236,146 134,146 134,198 C134,248 236,250 236,300 C236,352 134,352 134,322"
+              fill="none" stroke="#F0EBE0" strokeWidth="44" strokeLinecap="round"/>
             <path ref={vRef}
-              d="M252,192 L314,334 L376,192"
-              fill="none" stroke="#F0EBE0" strokeWidth="30"
+              d="M258,176 L320,336 L382,176"
+              fill="none" stroke="#F0EBE0" strokeWidth="44"
               strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
