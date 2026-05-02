@@ -1,0 +1,17 @@
+{
+  "name": "Vabi Sabharwal",
+  "short_name": "Vabi Sabharwal",
+  "description": "AI strategy, consulting, and web development — Sabharwal Ventures",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#0A0A0A",
+  "icons": [
+    {
+      "src": "/sv-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
