@@ -1,41 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <!-- Dark rounded background -->
-  <rect width="512" height="512" rx="110" fill="#0A0A0A"/>
+  <rect width="32" height="32" rx="7" fill="#0A0A0A"/>
 
-  <defs>
-    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
+  <!-- Diamond outline (rotated square) — thick enough to read at 16px -->
+  <rect
+    x="5" y="5" width="22" height="22" rx="4"
+    transform="rotate(45 16 16)"
+    fill="none" stroke="#F4C96A" stroke-width="2.2"
+    stroke-linejoin="round"/>
 
-  <!-- Gold glow backing -->
-  <g opacity="0.6" filter="url(#glow)">
-    <path
-      d="M168,80 L344,80 A88,88 0 0 1 432,168 L432,344 A88,88 0 0 1 344,432 L168,432 A88,88 0 0 1 80,344 L80,168 A88,88 0 0 1 168,80 Z"
-      transform="rotate(45 256 256)"
-      fill="none" stroke="rgba(244,201,106,1)" stroke-width="26"
-      stroke-linecap="round" stroke-linejoin="round"/>
-    <path
-      d="M238,192 C238,166 146,166 146,210 C146,255 238,258 238,300 C238,342 146,342 146,320"
-      fill="none" stroke="rgba(244,201,106,1)" stroke-width="30" stroke-linecap="round"/>
-    <path
-      d="M252,192 L314,334 L376,192"
-      fill="none" stroke="rgba(244,201,106,1)" stroke-width="30"
-      stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
+  <!-- S -->
+  <path
+    d="M11 11.5 C11 10 9 10 9 11.5 C9 13 11 13 11 14.5 C11 16 9 16 9 14.8"
+    fill="none" stroke="#F0EBE0" stroke-width="1.6" stroke-linecap="round"/>
 
-  <!-- Main cream strokes -->
+  <!-- V -->
   <path
-    d="M168,80 L344,80 A88,88 0 0 1 432,168 L432,344 A88,88 0 0 1 344,432 L168,432 A88,88 0 0 1 80,344 L80,168 A88,88 0 0 1 168,80 Z"
-    transform="rotate(45 256 256)"
-    fill="none" stroke="#F0EBE0" stroke-width="26"
-    stroke-linecap="round" stroke-linejoin="round"/>
-  <path
-    d="M238,192 C238,166 146,166 146,210 C146,255 238,258 238,300 C238,342 146,342 146,320"
-    fill="none" stroke="#F0EBE0" stroke-width="30" stroke-linecap="round"/>
-  <path
-    d="M252,192 L314,334 L376,192"
-    fill="none" stroke="#F0EBE0" stroke-width="30"
+    d="M13 10.5 L15.5 16 L18 10.5"
+    fill="none" stroke="#F0EBE0" stroke-width="1.6"
     stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
