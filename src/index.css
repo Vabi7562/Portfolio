@@ -1,0 +1,114 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #F4F0E8;
+  --color-secondary: #C8BFA8;
+  --color-accent: #F4C96A;
+  --color-background: #0A0A0A;
+  --color-foreground: #F0EBE0;
+  --color-muted: #8A8070;
+  --color-border: rgba(255, 255, 255, 0.10);
+  --foreground: #F0EBE0;
+}
+
+@theme inline {
+  --color-foreground: var(--foreground);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none !important;
+}
+
+body {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0A0A0A;
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Archivo', sans-serif;
+}
+
+/* ── Shooting Stars ──────────────────────────────────────── */
+.shooting-star-wrap {
+  position: absolute;
+  pointer-events: none;
+  animation: ss-fall linear infinite;
+}
+
+.shooting-star-line {
+  height: 1px;
+  border-radius: 50px;
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    var(--ss-color, rgba(255, 220, 140, 0.9)) 30%,
+    transparent 100%
+  );
+  transform: rotate(-45deg);
+  transform-origin: left center;
+  position: relative;
+}
+
+/* bright head dot at the leading (left) end */
+.shooting-star-line::after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  translate: 0 -50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow:
+    0 0 4px 2px rgba(255, 255, 255, 0.7),
+    0 0 8px 4px var(--ss-color, rgba(255, 220, 140, 0.5));
+}
+
+/* ── Star twinkling ──────────────────────────────────────── */
+@keyframes twinkle-a {
+  0%, 100% { opacity: 0.9; }
+  40%       { opacity: 0.3; }
+  60%       { opacity: 0.7; }
+}
+@keyframes twinkle-b {
+  0%, 100% { opacity: 0.7; }
+  25%       { opacity: 1;   }
+  55%       { opacity: 0.2; }
+  80%       { opacity: 0.8; }
+}
+@keyframes twinkle-c {
+  0%, 100% { opacity: 0.5; }
+  30%       { opacity: 0.9; }
+  70%       { opacity: 0.1; }
+}
+
+.star-twinkle-a { animation: twinkle-a var(--tw-dur, 4s) var(--tw-delay, 0s) ease-in-out infinite; }
+.star-twinkle-b { animation: twinkle-b var(--tw-dur, 6s) var(--tw-delay, 0s) ease-in-out infinite; }
+.star-twinkle-c { animation: twinkle-c var(--tw-dur, 8s) var(--tw-delay, 0s) ease-in-out infinite; }
+
+/* ── Touch devices: restore native cursor ────────────────── */
+@media (hover: none) and (pointer: coarse) {
+  * { cursor: auto !important; }
+  body { cursor: auto; }
+}
+
+@keyframes ss-fall {
+  0%   { transform: translateX(0)     translateY(0);     opacity: 0; }
+  3%   { opacity: 1; }
+  /* slow flight — occupies 3%→42% of the cycle */
+  42%  { opacity: 1;
+         transform: translateX(-650px) translateY(650px); }
+  48%  { opacity: 0;
+         transform: translateX(-720px) translateY(720px); }
+  /* long invisible pause for the rest */
+  100% { opacity: 0;
+         transform: translateX(0)     translateY(0); }
+}
